@@ -11,7 +11,7 @@ const forcast=(latitude,longitude,callback)=>{
             callback('Unable to find location',undefined)
         }
         else{
-            callback(undefined,body.daily[0].weather[0].description+' The temp of outside is '+body.current.temp+' and the humidity is '+body.current.humidity+' %')
+            callback(undefined,body.daily[0].weather[0].description+' the temp of outside is '+body.current.temp+'.The high and low temp are '+ body.daily[0].temp.max +' and '+ body.daily[0].temp.min +' respectively and the humidity is '+body.current.humidity+' %')
         }
     })
 }
